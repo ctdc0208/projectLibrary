@@ -22,7 +22,7 @@ h1 {
 
 #choices button {
     padding: 6px;
-    background: white;
+    background: #f3f3f3;
     border: 1px black solid;
     border-radius: 6px;
     cursor: pointer;
