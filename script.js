@@ -1,4 +1,11 @@
-let myLibrary = [];
+let myLibrary = [
+  {
+    title : "The Hobbit",
+    author : "JRR Martin",
+    pages: 123,
+    read : true,
+  }
+];
 
 function Book() {
   constructor(title, author, pages, status)
@@ -76,3 +83,5 @@ function newBook() {
     }
   }
 }
+
+function showInfoLibrary
