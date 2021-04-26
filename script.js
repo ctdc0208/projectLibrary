@@ -43,5 +43,36 @@ function showBooksofLibrary() {
 }
 
 function newBook() {
+  var form = document.querySelector('form');
+  var titleInput = document.querySelector('#titleInput');
+  var titleError = document.querySelector('.titleError');
+  var authorInput = document.querySelector('#authorInput');
+  var authorError = document.querySelector('.authorError');
+  var pagesInput = document.querySelector('#pagesInput');
+  var pagesError = document.querySelector('.pagesError');
+  var checkStatus = document.querySelector('input[name="checkbox"]');
 
+  if (titleInput.value === '') {
+    titleError.style.display = 'block';
+  } else {
+    titleError.style.display = 'none';
+  }
+  if (authorInput.value === '') {
+    authorError.style.display = 'block';
+  } else {
+    authorError.style.display = 'none';
+  }
+  if (pagesInput.value === '' || pagesInput.value.match(/[^1-9])/) || pagesInput.value <= 0) {
+    pagesError.style.display = 'block';
+  } else {
+    pagesError.style.display = 'block';
+  }
+
+  if (titleInput.value !== '' && authorInput.value !== '' && pagesInput.value !== '' && numberInput.value > 0) {
+    if (checkStatus.checked) {
+      addBookToLibrary(titleInput.value, authorInput.value, pagesInput.value, true);
+    } else {
+      addBookToLibrary(titleInput.value, authorInput.value, pagesInput.value, false);
+    }
+  }
 }
