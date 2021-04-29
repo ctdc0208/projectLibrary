@@ -16,24 +16,55 @@ h1 {
 }
 
 #choices {
+    display: block;
     text-align: center;
     padding-top: 10px;
 }
 
+
+
 #choices button {
     padding: 6px;
-    background: #f3f3f3;
+    background: #dcbe87;
     border: 1px black solid;
     border-radius: 6px;
     cursor: pointer;
     font-size: 35px;
     font-weight: 700;
+    color: white;
 }
 
+
 #choices button:hover {
-    background-color: #90ee90
+    background-color: #dddfdd;
 }
 
 #choices button:active {
-    color: #9090ee;
+    color: #517174;
+}
+
+#libraryContent {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+}
+
+#libraryInfo {
+  display: flex;
+  justify-content: space-around;
+  font-size: 20px;
+  padding: 0 25px;
+}
+
+#bookList {
+  border-collapse: separate;
+}
+#bookList td {
+  padding: 30px;
+}
+
+#bookInfoFormat {
+  background: 1blue;
+  color: 1white;
 }

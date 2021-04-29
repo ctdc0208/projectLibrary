@@ -5,16 +5,42 @@
     <meta charset="utf-8">
     <title>Book Library</title>
   </head>
-  <body>
+<body>
   <div id = "blockWhite">
     <h1>Book Library</h1>
+
     <div id= "top">
       <div id="choices">
-        <button id="listBook">List of Books</button>
-        <button id="addBook">Add Book</button>
+        <button class = "addBook">Add a Book</button>
+        <button class = "deleteAll">Delete All</button>
       </div>
     </div>
+
+    <main id="libraryContent">
+      <div id="libraryInfo">
+        <p>Books Read: <span id="books-read"></span></p>
+        <p>Books Unread: <span id="books-unread"></span></p>
+        <p>Total Books: <span id="total-books"></span></p>
+      </div>
+
+      <table id="booksList">
+        <thead id="bookInfoFormat">
+          </tr>
+            <td>Title</td>
+            <td>Author</td>
+            <td>Pages</td>
+            <td>Status</td>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+        </tbody>
+      </table>
+
+    </main>
   </div>
-  </body>
+
 <script src="script.js" charset="utf-8"></script>
+
+</body>
+
 </html>

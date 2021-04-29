@@ -13,7 +13,6 @@ function Book() {
     this.author = author;
     this.pages = pages;
     this.status = status;
-  }
 }
 
 function addBookToLibrary() {
@@ -24,28 +23,24 @@ function addBookToLibrary() {
 
 
 function showBooksofLibrary() {
-  var bookList = document.querySelector('table');
+  var bookList = document.querySelector('#tableBody');
   bookList.testContent();
   for (let i = 0; i < myLibrary.length; i++) {
-    var bookTable = document.createElement('bookTable');
+    var bookTable = document.createElement('tr');
     bookTable.classList.add('bookInfo');
     bookList.appendChild(bookTable;
 
-    var bookTitle = document.createElement('bookTitle');
+    var bookTitle = document.createElement('td');
     bookTitle.textContent = myLibrary[i].title;
     bookTable.appendChild(bookTitle);
 
-    var bookAuthor = document.createElement('bookAuthor');
+    var bookAuthor = document.createElement('td');
     bookAuthor.textContent = myLibrary[i].author;
     bookTable.appendChild(bookAuthor);
 
-    var bookPages = document.createElement('bookPages');
+    var bookPages = document.createElement('td');
     bookPages.textContent = myLibrary[i].pages;
     bookTable.appendChild(bookPages);
-
-    var bookStatus = document.createElement('bookStatus');
-    bookStatus.textContent = myLibrary[i].status;
-    bookTable.appendChild(bookStatus);
   }
 }
 
@@ -84,4 +79,22 @@ function newBook() {
   }
 }
 
-function showInfoLibrary
+function showInfoLibrary {
+  var booksRead = document.querySelector('#books-read');
+  var booksUnread = document.querySelector('#books-unread');
+  var totalBooks = document.querySelector('#total-books');
+  let readCounter = 0;
+  let unreadCounter = 0;
+  booksRead.textContent = 0;
+  booksUnread.textContent = 0;
+  for (let i = 0; i < myLibrary.length; i += 1) {
+    if (myLibrary[i].status === true) {
+      readCounter += 1;
+      booksRead.textContent = readCounter;
+    } else if (myLibrary[i].status === false) {
+      unreadCounter += 1;
+      booksUnread.textContent = unreadCounter;
+    }
+  }
+  totalBooks.textContent = myLibrary.length;
+}
