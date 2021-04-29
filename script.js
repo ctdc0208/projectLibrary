@@ -16,43 +16,44 @@ function Book() {
 }
 
 function addBookToLibrary() {
-  var book = new Book (title, author, pages, status);
+  const book = new Book (title, author, pages, status);
   myLibrary.push(book);
   showBooksofLibrary();
 }
 
 
 function showBooksofLibrary() {
-  var bookList = document.querySelector('#tableBody');
+  const bookList = document.querySelector('#tableBody');
   bookList.testContent();
   for (let i = 0; i < myLibrary.length; i++) {
-    var bookTable = document.createElement('tr');
+    const bookTable = document.createElement('tr');
     bookTable.classList.add('bookInfo');
-    bookList.appendChild(bookTable;
+    bookList.appendChild(bookTable);
 
-    var bookTitle = document.createElement('td');
+    const bookTitle = document.createElement('td');
     bookTitle.textContent = myLibrary[i].title;
     bookTable.appendChild(bookTitle);
 
-    var bookAuthor = document.createElement('td');
+    const bookAuthor = document.createElement('td');
     bookAuthor.textContent = myLibrary[i].author;
     bookTable.appendChild(bookAuthor);
 
-    var bookPages = document.createElement('td');
+    const bookPages = document.createElement('td');
     bookPages.textContent = myLibrary[i].pages;
     bookTable.appendChild(bookPages);
   }
 }
 
 function newBook() {
-  var form = document.querySelector('form');
-  var titleInput = document.querySelector('#titleInput');
-  var titleError = document.querySelector('.titleError');
-  var authorInput = document.querySelector('#authorInput');
-  var authorError = document.querySelector('.authorError');
-  var pagesInput = document.querySelector('#pagesInput');
-  var pagesError = document.querySelector('.pagesError');
-  var checkStatus = document.querySelector('input[name="checkbox"]');
+  event.preventDefault();
+  const form = document.querySelector('form');
+  const titleInput = document.querySelector('#titleInput');
+  const titleError = document.querySelector('.titleError');
+  const authorInput = document.querySelector('#authorInput');
+  const authorError = document.querySelector('.authorError');
+  const pagesInput = document.querySelector('#pagesInput');
+  const pagesError = document.querySelector('.pagesError');
+  const checkStatus = document.querySelector('input[name="checkbox"]');
 
   if (titleInput.value === '') {
     titleError.style.display = 'block';
@@ -76,13 +77,14 @@ function newBook() {
     } else {
       addBookToLibrary(titleInput.value, authorInput.value, pagesInput.value, false);
     }
+    form.reset
   }
 }
 
 function showInfoLibrary {
-  var booksRead = document.querySelector('#books-read');
-  var booksUnread = document.querySelector('#books-unread');
-  var totalBooks = document.querySelector('#total-books');
+  const booksRead = document.querySelector('#books-read');
+  const booksUnread = document.querySelector('#books-unread');
+  const totalBooks = document.querySelector('#total-books');
   let readCounter = 0;
   let unreadCounter = 0;
   booksRead.textContent = 0;
