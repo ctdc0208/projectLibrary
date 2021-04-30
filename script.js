@@ -1,3 +1,8 @@
+
+
+
+
+
 let myLibrary = [
   {
     title : "The Hobbit",
@@ -7,7 +12,7 @@ let myLibrary = [
   }
 ];
 
-function Book() {
+class Book() {
   constructor(title, author, pages, status)
     this.title = title;
     this.author = author;
@@ -16,6 +21,7 @@ function Book() {
 }
 
 function addBookToLibrary() {
+  event.preventDefault();
   const book = new Book (title, author, pages, status);
   myLibrary.push(book);
   showBooksofLibrary();

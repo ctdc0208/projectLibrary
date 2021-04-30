@@ -1,0 +1,76 @@
+body {
+  background-color: white;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 60px;
+}
+
+#addButton-Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#addBookToLibrary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  font-size: 25px;
+  border-radius: 10px;
+  border: solid 3px black;
+}
+
+#deleteAll {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  font-size: 25px;
+  border-radius: 10px;
+  border: solid 3px black;
+}
+
+#popUp-Form {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  font-size: 30px;
+}
+
+#form {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 20%;
+}
+
+
+
+
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.checkbox-label {
+
+}
+
+#libraryContent {
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
