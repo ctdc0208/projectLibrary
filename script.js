@@ -1,7 +1,12 @@
+const newBook = document.querySelector('#newBook');
+newBook.addEventListener('click', () => popUpForm.style.display = 'block');
 
+const addButton = document.querySelector('#addButton');
+addButton.addEventListener('click', addBookToLibrary);
 
-
-
+const popUpForm = document.getElementById('popUp-form');
+const closePopUp = document.getElementsByTagName('span')[0];
+closePopUp.addEventListener('click', () => popUpForm.style.display = 'none');
 
 let myLibrary = [
   {
@@ -11,6 +16,7 @@ let myLibrary = [
     read : true,
   }
 ];
+let book;
 
 class Book() {
   constructor(title, author, pages, status)
@@ -22,6 +28,7 @@ class Book() {
 
 function addBookToLibrary() {
   event.preventDefault();
+  popUpForm.style.display = 'none';
   const book = new Book (title, author, pages, status);
   myLibrary.push(book);
   showBooksofLibrary();
