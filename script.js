@@ -32,6 +32,9 @@ function addBookToLibrary() {
   const book = new Book (title, author, pages, status);
   myLibrary.push(book);
   showBooksofLibrary();
+  setData();
+  render();
+  form.reset();
 }
 
 
@@ -112,4 +115,8 @@ function showInfoLibrary {
     }
   }
   totalBooks.textContent = myLibrary.length;
+}
+
+function setData() {
+ localStorage.setItem(`myLibrary`, JSON.stringify(myLibrary));
 }
