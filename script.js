@@ -20,10 +20,10 @@ let book;
 
 class Book() {
   constructor(title, author, pages, status)
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.status = status;
+    this.title = form.title;
+    this.author = form.author;
+    this.pages = form.pages;
+    this.status = form.status;
 }
 
 function addBookToLibrary() {
