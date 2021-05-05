@@ -1,18 +1,89 @@
 body {
   background-color: white;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;;
+}
+
+.backgroundImage {
+  padding: 70px 0;
+    padding-top: 70px;
+    padding-right: 0px;
+    padding-bottom: 70px;
+    padding-left: 0px;
+    background: #eee;
+      background-color: rgb(238, 238, 238);
+      background-position-x: 0%;
+      background-position-y: 0%;
+      background-repeat: repeat;
+      background-attachment: scroll;
+      background-image: none;
+      background-size: auto;
+      background-origin: padding-box;
+      background-clip: border-box;
+  text-align: center;
+}
+
+.container {
+  max-width: 720px;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-main {
+  display: block;
+  background-color: #fff;
+  padding: 40px 60px;
+        padding-top: 40px;
+        padding-right: 60px;
+        padding-bottom: 40px;
+        padding-left: 60px;
+  position: relative;
+  box-shadow: 0px 15px 30px rgba(0,0,0,0.15);
+  transition: 0.3s;
+        transition-property: all;
+        transition-duration: 0.3s;
+        transition-timing-function: ease;
+        transition-delay: 0s;
+  border-radius: 10px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+  margin-bottom: 60px;
+  box-sizing: border-box;
 }
 
 h1 {
   display: flex;
   justify-content: center;
-  font-size: 60px;
+  font-size: 100px;
 }
 
-#addButton-Container {
+.addDeleteButton {
+  padding: 0.5rem 1rem;
+    padding-top: 0.5rem;
+    padding-right: 1rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+  border-radius: 0.2em;
+    border-top-left-radius: 0.2em;
+    border-top-right-radius: 0.2em;
+    border-bottom-right-radius: 0.2em;
+    border-bottom-left-radius: 0.2em;
+  font-weight: 600;
+  text-align: center;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
+  justify-content: space-around;
+  padding: 1em 0;
+    padding-top: 1em;
+    padding-right: 0px;
+    padding-bottom: 1em;
+    padding-left: 0px;
 }
 
 #newBook {

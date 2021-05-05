@@ -18,12 +18,13 @@ let myLibrary = [
 ];
 let book;
 
-class Book() {
-  constructor(title, author, pages, status)
+class Book {
+  constructor(title, author, pages, status){
     this.title = form.title;
     this.author = form.author;
     this.pages = form.pages;
     this.status = form.status;
+  }
 }
 
 function addBookToLibrary() {
@@ -60,7 +61,7 @@ function showBooksofLibrary() {
   }
 }
 
-function newBook() {
+function createNewBook() {
   event.preventDefault();
   const form = document.querySelector('form');
   const titleInput = document.querySelector('#titleInput');
