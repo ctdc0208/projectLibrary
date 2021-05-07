@@ -12,16 +12,18 @@ body {
     padding-right: 0px;
     padding-bottom: 70px;
     padding-left: 0px;
-    background: #eee;
+    background-image: url(https://images.pexels.com/photos/4440123/pexels-photo-4440123.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
       background-color: rgb(238, 238, 238);
       background-position-x: 0%;
       background-position-y: 0%;
       background-repeat: repeat;
-      background-attachment: scroll;
-      background-image: none;
-      background-size: auto;
+      background-attachment: fixed;
+      background-size: cover;
       background-origin: padding-box;
       background-clip: border-box;
+      background-repeat: no-repeat;
+      background-position: center;
+
   text-align: center;
 }
 
@@ -32,6 +34,7 @@ body {
   padding-left: 15px;
   margin-left: auto;
   margin-right: auto;
+  min-height: 700px;
 }
 
 .card-main {
@@ -56,6 +59,7 @@ body {
         border-bottom-left-radius: 10px;
   margin-bottom: 60px;
   box-sizing: border-box;
+  min-height: 700px;
 }
 
 h1 {
