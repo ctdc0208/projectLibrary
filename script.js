@@ -12,6 +12,12 @@ class Book() {
   }
 }
 
-function addBookToLibrary {
+function addBookToLibrary(title, author, pages, status) {
+  const book = new Book(title, author, pages, status);
+  myLibrary.push(book);
+  showBooks();
+}
 
+function showBooks {
+  const;
 }
