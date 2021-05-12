@@ -19,7 +19,7 @@
           <button id="newBook">Add a book</button>
           <button id="deleteAll">Delete All Book</button>
         </div>
-        <div id="popUp-Form">
+        <div id="popUp">
           <form id="form" action='/script.js'>
             <span class="close">&times;</span>
             <h3>New Book</h3>
@@ -43,7 +43,6 @@
             <p>Books Read:</p>
             <p>Books UnRead:</p>
             <p>Total Books:</p>
-            <button>Delete All</button>
           </div>
           <table class="bookList">
             <tableHead>
@@ -53,7 +52,7 @@
               <th>Status</th>
               <th>Removal</th>
             </tableHead>
-            <tableBody>
+            <tableBody id="tableBody">
             </tableBody>
           </table>
 
