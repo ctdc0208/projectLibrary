@@ -15,10 +15,10 @@ let myLibrary = [
 
 class Book {
   constructor(title, author, pages, status){
-    this.title = form.title.value;
-    this.author = form.author.value;
-    this.pages = form.pages.value;
-    this.status = form.status.checked;
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.status = status;
   }
 }
 
@@ -29,67 +29,4 @@ function addBookToLibrary(title, author, pages, status) {
   const book = new Book(title, author, pages, status);
   myLibrary.push(book);
   showBooks();
-  form.reset();
 }
-
-function showLibraryInfo() {
-  const booksRead = document.querySelector('#books-read');
-  const booksUnread = document.querySelector('#books-unread');
-  const totalBooks = document.querySelector('#total-books');
-  let readCounter = 0;
-  let unreadCounter = 0;
-  booksRead.textContent = 0;
-  booksUnread.textContent = 0;
-  for (let i = 0; i < myLibrary.length; i += 1){
-    if (myLibrary[i].status === true) {
-      readCounter += 1;
-      booksRead.textContent = readCounter;
-    } else if (myLibrary[i].status === false) {
-      unreadCounter += 1;
-      booksUnread.textContent = unreadCounter;
-    }
-  } totalBooks.textContent = myLibrary.length;
-}
-
-function showBooks() {
-
-  localStorage.setItem('books', JSON.stringify(myLibrary));
-  showLibraryInfo();
-  const bookList = document.querySelector('#tableBody');
-  bookList.textContent = '';
-  for (let i = 0; i < myLibrary.length; i += 1) {
-    const bookRow = document.createElement('tableHead');
-    bookRow.classList.add('book-info');
-    bookList.appendChild(bookRow);
-
-    const bookTitle = document.createElement('th');
-    bookTitle.textContent = myLibrary[i].title;
-    bookRow.appendChild(bookTitle);
-
-    const bookAuthor = document.createElement('th');
-    bookAuthor.textContent = myLibrary[i].author;
-    bookRow.appendChild(bookAuthor);
-
-    const bookPages = document.createElement('th');
-    bookPages.textContent = myLibrary[i].pages;
-    bookRow.appendChild(bookPages);
-
-    const bookStatus = document.createElement('th');
-    const statusSymbol = document.createElement('i');
-    if (myLibrary[i].status === false) {
-      statusSymbol.classList.add('fas', 'fa-times');
-    } else {
-      statusSymbol.classList.add('fas', 'fa-check');
-    }
-    bookStatus.appendChild(statusSymbol);
-    bookRow.appendChild(bookStatus);
-
-    const bookDelete = document.createElement('th');
-    const deleteSymbol = document.createElement('i');
-    deleteSymbol.classList.add('fas', 'fa-trash-alt');
-    bookDelete.appendChild(deleteSymbol);
-    bookRow.appendChild(bookDelete);
-  }
-}
-
-showBooks();
