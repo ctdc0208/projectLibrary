@@ -10,8 +10,7 @@ const closePopUp = document.getElementsByTagName('span')[0];
 closePopUp.addEventListener('click', () => popUpForm.style.display = 'none');
 
 
-let myLibrary = [
-];
+let myLibrary = [];
 
 class Book {
   constructor(title, author, pages, status){
@@ -22,11 +21,15 @@ class Book {
   }
 }
 
-function addBookToLibrary(title, author, pages, status) {
+function addBookToLibrary() {
   event.preventDefault();
   popUpForm.style.display = 'none';
 
   const book = new Book(title, author, pages, status);
   myLibrary.push(book);
   showBooks();
+}
+
+function showBooksInTable() {
+
 }
