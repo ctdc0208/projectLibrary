@@ -12,24 +12,19 @@ closePopUp.addEventListener('click', () => popUpForm.style.display = 'none');
 
 let myLibrary = [];
 
-class Book {
-  constructor(title, author, pages, status){
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.status = status;
-  }
+function Book(title, author, pages, read) {
+  this.title = title
+  this.author = author
+  this.pages = pages
+  this.status = status
 }
 
-function addBookToLibrary() {
-  event.preventDefault();
-  popUpForm.style.display = 'none';
-
+function addBookToLibrary(title, author, pages, read){
   const book = new Book(title, author, pages, status);
   myLibrary.push(book);
-  showBooks();
+  console.log(title + " by " + author + ", " +  pages + " pages" +", " + read);
 }
 
-function showBooksInTable() {
 
-}
+addBookToLibrary("The Hobbit","J.R.R. Tolkien", 295," not read yet");
+console.log(addBookToLibrary);
