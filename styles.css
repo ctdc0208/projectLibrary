@@ -209,19 +209,15 @@ img {
   font-size: 16px;
 }
 
-table {
-
-}
-.tableHead {
-  display: flex;
-  justify-content: space-around;
-  font-size: 16px;
-}
-
 .bookList {
   border-collapse: collapse;
 }
 .bookList th{
   padding: 25px;
+}
+.book-values {
   background-color: #DCBE87;
+}
+.book-info {
+  border-bottom: dotted;
 }

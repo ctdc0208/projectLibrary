@@ -22,9 +22,37 @@ function Book(title, author, pages, read) {
 function addBookToLibrary(title, author, pages, read){
   const book = new Book(title, author, pages, status);
   myLibrary.push(book);
-  console.log(title + " by " + author + ", " +  pages + " pages" +", " + read);
 }
 
+function displayBooks() {
+  const bookList = document.querySelector('#table-body');
+  bookList.textContent = '';
+  for (let i = 0; i < myLibrary.length; i += 1) {
+    const bookRow = document.createElement('tr');
+    bookRow.classList.add('book-info');
+    bookList.appendChild(bookRow);
 
-addBookToLibrary("The Hobbit","J.R.R. Tolkien", 295," not read yet");
-console.log(addBookToLibrary);
+    const bookTitle = document.createElement('th');
+    bookTitle.textContent = myLibrary[i].title;
+    bookRow.appendChild(bookTitle);
+
+    const bookAuthor = document.createElement('th');
+    bookAuthor.textContent = myLibrary[i].author;
+    bookRow.appendChild(bookAuthor);
+
+    const bookPages = document.createElement('th');
+    bookPages.textContent = myLibrary[i].pages;
+    bookRow.appendChild(bookPages);
+
+    const bookStatus = document.createElement('th');
+    bookStatus.textContent = myLibrary[i].status;
+    bookRow.appendChild(bookStatus);
+  }
+}
+
+addBookToLibrary("The Hobbsdit","J.R.R. Twolkien", 295,"nsot read yet");
+addBookToLibrary("The Hobbit","J.R.R. Tsolkien", 295,"not reaawd yet");
+addBookToLibrary("The Hobbasdit","J.R.R. Twolkien", 295," not wdread yet");
+addBookToLibrary("The Hobbait","J.R.dR.a Tolkien", 295," not awread yet");
+
+displayBooks();
