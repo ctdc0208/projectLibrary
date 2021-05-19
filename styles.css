@@ -28,11 +28,11 @@ body {
       background-position: center;
       background-size: cover;
   text-align: center;
-  height: 10000%; /*To ensure that its not short and cover all */
+  height: 200%; /*To ensure that its not short and cover all */
 }
 
 .container {
-  max-width: 720px;
+  max-width: 950px;
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
