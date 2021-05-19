@@ -50,9 +50,10 @@ function displayBooks() {
   }
 }
 
-addBookToLibrary("The Hobbsdit","J.R.R. Twolkien", 295,"nsot read yet");
-addBookToLibrary("The Hobbit","J.R.R. Tsolkien", 295,"not reaawd yet");
-addBookToLibrary("The Hobbasdit","J.R.R. Twolkien", 295," not wdread yet");
-addBookToLibrary("The Hobbait","J.R.dR.a Tolkien", 295," not awread yet");
+addBookToLibrary("Atomic Habits","James Clear", 320, true);
+addBookToLibrary("The Hobbit","J.R.R. Tolkien", 295,"not reaawd yet");
+addBookToLibrary("No Longer Human","Osamu Dazai", 271," not wdread yet");
+addBookToLibrary("American Psycho","Bret Easton Ellis", 399," not awread yet");
+
 
 displayBooks();
