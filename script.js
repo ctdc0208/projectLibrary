@@ -16,11 +16,11 @@ function Book(title, author, pages, read) {
   this.title = title
   this.author = author
   this.pages = pages
-  this.status = status
+  this.read = read
 }
 
 function addBookToLibrary(title, author, pages, read){
-  const book = new Book(title, author, pages, status);
+  const book = new Book(title, author, pages, read);
   myLibrary.push(book);
 }
 
@@ -44,16 +44,28 @@ function displayBooks() {
     bookPages.textContent = myLibrary[i].pages;
     bookRow.appendChild(bookPages);
 
-    const bookStatus = document.createElement('th');
-    bookStatus.textContent = myLibrary[i].status;
-    bookRow.appendChild(bookStatus);
+    const bookRead = document.createElement('th');
+    const readSymbol = document.createElement('i');
+    if (myLibrary[i].read === true) {
+      readSymbol.classList.add('checkmark_true');
+    } else {
+      readSymbol.classList.add('checkmark_false');
+    }
+    bookRead.appendChild(readSymbol);
+    bookRow.appendChild(bookRead);
+
+    const bookDelete = document.createElement('td');
+    const deleteSymbol = document.createElement('i');
+    deleteSymbol.classList.add('checkmark_true');
+    bookDelete.appendChild(deleteSymbol);
+    bookRow.appendChild(bookDelete);
   }
 }
 
-addBookToLibrary("Atomic Habits","James Clear", 320, true);
-addBookToLibrary("The Hobbit","J.R.R. Tolkien", 295,"not reaawd yet");
-addBookToLibrary("No Longer Human","Osamu Dazai", 271," not wdread yet");
-addBookToLibrary("American Psycho","Bret Easton Ellis", 399," not awread yet");
+addBookToLibrary("Atomic Habits","James Clear", 320, false);
+addBookToLibrary("The Hobbit","J.R.R. Tolkien", 295, true);
+addBookToLibrary("No Longer Human","Osamu Dazai", 271, false);
+addBookToLibrary("American Psycho","Bret Easton Ellis", 399, true);
 
 
 displayBooks();
