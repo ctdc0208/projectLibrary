@@ -56,7 +56,7 @@ function displayBooks() {
 
     const bookDelete = document.createElement('td');
     const deleteSymbol = document.createElement('i');
-    deleteSymbol.classList.add('checkmark_true');
+    deleteSymbol.classList.add('delete_icon');
     bookDelete.appendChild(deleteSymbol);
     bookRow.appendChild(bookDelete);
   }
