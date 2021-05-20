@@ -5,6 +5,7 @@ body {
   line-height: 1.5;
   color: #212529;
   padding: 0px;
+  margin: 0px;
 }
 
 .backgroundImage {
@@ -15,20 +16,17 @@ body {
     padding-left: 0px;
     background-image: url(https://images.pexels.com/photos/590493/pexels-photo-590493.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
       top: 0;
-      bottom: 0;
+      bottom: 0px;
       right: 0;
       left: 0;
-      position: absolute;
+      position: relative;
       background-color: rgb(238, 238, 238);
       background-attachment: fixed;
       background-size: cover;
-      background-origin: padding-box;
-      background-clip: border-box;
       background-repeat: no-repeat;
       background-position: center;
-      background-size: cover;
   text-align: center;
-  height: 200%; /*To ensure that its not short and cover all */
+  height: 100%;
 }
 
 .container {
