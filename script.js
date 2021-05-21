@@ -20,8 +20,11 @@ function Book(title, author, pages, read) {
 }
 
 function addBookToLibrary(title, author, pages, read){
+  popUpForm.style.display = 'none';
+
   const book = new Book(title, author, pages, read);
   myLibrary.push(book);
+  displayBooks();
 }
 
 function displayBooks() {
@@ -61,6 +64,34 @@ function displayBooks() {
     bookRow.appendChild(bookDelete);
   }
 }
+
+function newBook(event) {
+  const form = document.querySelector('form')
+  const titleInput = document.querySelector('#title');
+  const authorInput = document.querySelector('#author');
+  const pagesInput = document.querySelector('#pages');
+  const checkbox = document.querySelector('input[name="checkbox"]');
+  if (titleInput.value !== "" && authorInput.value !== "" && pagesInput.value !== ""){
+    if (checkbox.checked) {
+      addBookToLibrary(titleInput.value, authorInput.value, pagesInput.value, true);
+    } else {
+      addBookToLibrary(titleInput.value, authorInput.value, pagesInput.value, false);
+    }
+    form.reset;
+  }
+}
+
+function listenClick() {
+  document.addEventListener('click', (event) => {
+  const { target } = event;
+  const tr = target.parentNode.parentNode.rowIndex - 1;
+  if (target.id === 'addButton') {
+    newBook(event);
+    }
+  });
+}
+
+
 
 addBookToLibrary("Atomic Habits","James Clear", 320, false);
 addBookToLibrary("The Hobbit","J.R.R. Tolkien", 295, true);
