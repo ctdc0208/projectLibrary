@@ -1,6 +1,3 @@
-const addButton = document.querySelector('#addButton');
-addButton.addEventListener('click', addBookToLibrary);
-
 const newBook = document.querySelector('#newBook');
 newBook.addEventListener('click', () => popUpForm.style.display = 'block');
 
@@ -68,29 +65,29 @@ function displayBooks() {
 function createBook(event) {
   const form = document.querySelector('form')
   const titleInput = document.querySelector('#title');
-  const authorInput = document.querySelector('#author');
-  const pagesInput = document.querySelector('#pages');
+  const nameInput = document.querySelector('#author');
+  const numberInput = document.querySelector('#pages');
   const checkbox = document.querySelector('input[name="checkbox"]');
-  if (titleInput.value !== "" && authorInput.value !== "" && pagesInput.value !== ""){
-    if (checkbox.checked) {
-      addBookToLibrary(titleInput.value, authorInput.value, pagesInput.value, true);
-    } else {
-      addBookToLibrary(titleInput.value, authorInput.value, pagesInput.value, false);
+    if (titleInput.value !== '' && nameInput.value !== '' && numberInput.value !== '' && numberInput.value > 0) {
+      if (checkbox.checked) {
+        addBookToLibrary(titleInput.value, nameInput.value, numberInput.value, true);
+      } else {
+        addBookToLibrary(titleInput.value, nameInput.value, numberInput.value, false);
+      }
+      form.reset();
     }
-    form.reset;
   }
-}
 
-function listenClick() {
-  document.addEventListener('click', (event) => {
-  const { target } = event;
-  const tr = target.parentNode.parentNode.rowIndex - 1;
-  if (target.id === 'addButton') {
-    createBook(event);
-    }
-  });
-}
 
+  function listenClicks() {
+    document.addEventListener('click', (event) => {
+      const { target } = event;
+      const tr = target.parentNode.parentNode.rowIndex - 1;
+      if (target.id === 'addButton') {
+        createBook(event);
+      }
+    });
+  }
 
 
 addBookToLibrary("Atomic Habits","James Clear", 320, false);
@@ -100,3 +97,4 @@ addBookToLibrary("American Psycho","Bret Easton Ellis", 399, true);
 
 
 displayBooks();
+listenClicks();
