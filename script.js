@@ -62,35 +62,7 @@ function displayBooks() {
   }
 }
 
-<<<<<<< HEAD
 function createBook(event) {
-  const form = document.querySelector('form')
-  const titleInput = document.querySelector('#subject');
-  const nameInput = document.querySelector('#name');
-  const numberInput = document.querySelector('#number');
-  const checkbox = document.querySelector('input[name="checkbox"]');
-    if (titleInput.value !== '' && nameInput.value !== '' && numberInput.value !== '' && numberInput.value > 0) {
-      if (checkbox.checked) {
-        addBookToLibrary(titleInput.value, nameInput.value, numberInput.value, true);
-      } else {
-        addBookToLibrary(titleInput.value, nameInput.value, numberInput.value, false);
-      }
-      form.reset();
-    }
-  }
-
-
-  function listenClicks() {
-    document.addEventListener('click', (event) => {
-      const { target } = event;
-      const tr = target.parentNode.parentNode.rowIndex - 1;
-      if (target.id === 'addButton') {
-        createBook(event);
-      }
-    });
-  }
-=======
-function newBook(event) {
   const form = document.querySelector('form')
   const titleInput = document.querySelector('#title');
   const nameInput = document.querySelector('#author');
@@ -106,7 +78,6 @@ function newBook(event) {
     }
   }
 
-<<<<<<< HEAD
 
   function listenClicks() {
     document.addEventListener('click', (event) => {
@@ -117,19 +88,7 @@ function newBook(event) {
       }
     });
   }
-=======
-function listenClick() {
-  document.addEventListener('click', (event) => {
-  const { target } = event;
-  const tr = target.parentNode.parentNode.rowIndex - 1;
-  if (target.id === 'addButton') {
-    newBook(event);
-    }
-  });
-}
 
->>>>>>> f498a11d9c3d9a9a18b79271310b146dd5a0c4fb
->>>>>>> d8678599bfbe462bbaa153e515686aa4842603c4
 
 
 addBookToLibrary("Atomic Habits","James Clear", 320, false);
