@@ -62,6 +62,7 @@ function displayBooks() {
   }
 }
 
+<<<<<<< HEAD
 function createBook(event) {
   const form = document.querySelector('form')
   const titleInput = document.querySelector('#subject');
@@ -88,6 +89,34 @@ function createBook(event) {
       }
     });
   }
+=======
+function newBook(event) {
+  const form = document.querySelector('form')
+  const titleInput = document.querySelector('#title');
+  const authorInput = document.querySelector('#author');
+  const pagesInput = document.querySelector('#pages');
+  const checkbox = document.querySelector('input[name="checkbox"]');
+  if (titleInput.value !== "" && authorInput.value !== "" && pagesInput.value !== ""){
+    if (checkbox.checked) {
+      addBookToLibrary(titleInput.value, authorInput.value, pagesInput.value, true);
+    } else {
+      addBookToLibrary(titleInput.value, authorInput.value, pagesInput.value, false);
+    }
+    form.reset;
+  }
+}
+
+function listenClick() {
+  document.addEventListener('click', (event) => {
+  const { target } = event;
+  const tr = target.parentNode.parentNode.rowIndex - 1;
+  if (target.id === 'addButton') {
+    newBook(event);
+    }
+  });
+}
+
+>>>>>>> f498a11d9c3d9a9a18b79271310b146dd5a0c4fb
 
 
 addBookToLibrary("Atomic Habits","James Clear", 320, false);
