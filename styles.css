@@ -116,6 +116,7 @@ img {
     padding-left: 0px;
 }
 
+
 #newBook {
   display: flex;
   justify-content: center;
@@ -125,6 +126,9 @@ img {
   font-size: 25px;
   border-radius: 10px;
   border: solid 3px black;
+}
+#newBook:hover {
+  cursor: pointer;
 }
 
 #deleteAll {
@@ -136,6 +140,9 @@ img {
   font-size: 25px;
   border-radius: 10px;
   border: solid 3px black;
+}
+#deleteAll:hover {
+  cursor: pointer;
 }
 
 #popUp {
@@ -169,18 +176,28 @@ img {
   width: 400px;
 }
 
-
-
-
 .close {
   color: #aaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
 }
+.close:hover {
+    cursor: pointer;
+}
 
 .checkbox-label {
 
+}
+.checkbox-label:hover {
+  cursor: pointer;
+}
+
+#addButton{
+
+}
+#addButton:hover{
+  cursor: pointer;
 }
 
 .libraryContent {
@@ -206,6 +223,7 @@ img {
 .book-info {
   border-bottom: dotted;
 }
+
 .checkmark_true {
   display: inline-block;
   color: green;
@@ -225,13 +243,16 @@ img {
       border-right: 7px solid;
 }
 .delete_icon {
-  background: url(https://icon-library.com/images/android-trash-can-icon/android-trash-can-icon-5.jpg);
-      height: 25px;
-      width: 12px;
-} /* edit with a delete button icon(trash can)*/
+  display: inline-block;
+      background: url(https://www.kindpng.com/picc/m/220-2200770_font-trash-fa-trash-icon-png-transparent-png.png);
+      color: black;
+      height: 50px;
+      width: 50px;
+}
 
 .checkmark_true:hover,
 .checkmark_false:hover,
 .delete_icon:hover {
   color: gray;
+  cursor: pointer;
 }

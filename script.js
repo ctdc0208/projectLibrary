@@ -85,18 +85,18 @@ function listenClicks() {
       const tr = target.parentNode.parentNode.rowIndex - 1;
       if (target.id === 'addButton') {
         createBook(event);
+      } else if (target.id === 'deleteAll') {
+        myLibrary = [];
       } else if (target.classList.contains('delete_icon')) {
         myLibrary.splice(tr, 1);
       } else if (target.classList.contains('checkmark_true')) {
         target.classList.remove('checkmark_true');
         target.classList.add('checkmark_false');
-        myLibrary[tr].status = false;
+        myLibrary[th].status = false;
       } else if (target.classList.contains('checkmark_false')) {
         target.classList.remove('checkmark_false');
         target.classList.add('checkmark_true');
-        myLibrary[tr].status = true;
-      } else if (target.id === 'deleteAll') {
-        myLibrary = [];
+        myLibrary[th].status = true;
       }
       displayBooks();
     });
