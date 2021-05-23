@@ -95,6 +95,8 @@ function listenClicks() {
         target.classList.remove('checkmark_false');
         target.classList.add('checkmark_true');
         myLibrary[tr].status = true;
+      } else if (target.id === 'deleteAll') {
+        myLibrary = [];
       }
       displayBooks();
     });
