@@ -16,7 +16,7 @@ body {
     padding-left: 0px;
     background-image: url(https://images.pexels.com/photos/590493/pexels-photo-590493.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
       top: 0;
-      bottom: 0px;
+      bottom: 0;
       right: 0;
       left: 0;
       position: relative;
@@ -30,13 +30,13 @@ body {
 }
 
 .container {
-  max-width: 950px;
+  max-width: 900px;
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
   margin-left: auto;
   margin-right: auto;
-  min-height: 700px;
+  min-height: 100%;
 }
 
 .card-main {
@@ -61,7 +61,7 @@ body {
         border-bottom-left-radius: 10px;
   margin-bottom: 60px;
   box-sizing: border-box;
-  min-height: 700px;
+  min-height: 800px;
 }
 
 .title-logo {
@@ -192,20 +192,6 @@ img {
     padding-right: 25px;
     padding-bottom: 25px;
     padding-left: 25px;
-
-}
-
-.libraryInfo {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 15px;
-  margin-bottom: 30px;
-  padding: 0 25px;
-    padding-top: 0px;
-    padding-right: 25px;
-    padding-bottom: 0px;
-    padding-left: 25px;
-  font-size: 16px;
 }
 
 .bookList {
@@ -239,9 +225,13 @@ img {
       border-right: 7px solid;
 }
 .delete_icon {
-  display: inline-block;
-      width: 30px;
-      height: 20px;
-      transform: skew(20deg);
-      background: blue;
+  background: url(https://icon-library.com/images/android-trash-can-icon/android-trash-can-icon-5.jpg);
+      height: 25px;
+      width: 12px;
 } /* edit with a delete button icon(trash can)*/
+
+.checkmark_true:hover,
+.checkmark_false:hover,
+.delete_icon:hover {
+  color: gray;
+}

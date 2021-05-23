@@ -79,15 +79,26 @@ function createBook(event) {
   }
 
 
-  function listenClicks() {
+function listenClicks() {
     document.addEventListener('click', (event) => {
       const { target } = event;
       const tr = target.parentNode.parentNode.rowIndex - 1;
       if (target.id === 'addButton') {
         createBook(event);
+      } else if (target.classList.contains('delete_icon')) {
+        myLibrary.splice(tr, 1);
+      } else if (target.classList.contains('checkmark_true')) {
+        target.classList.remove('checkmark_true');
+        target.classList.add('checkmark_false');
+        myLibrary[tr].status = false;
+      } else if (target.classList.contains('checkmark_false')) {
+        target.classList.remove('checkmark_false');
+        target.classList.add('checkmark_true');
+        myLibrary[tr].status = true;
       }
+      displayBooks();
     });
-  }
+}
 
 
 
