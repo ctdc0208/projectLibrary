@@ -54,8 +54,10 @@ function displayBooks() {
     bookRead.appendChild(readSymbol);
     bookRow.appendChild(bookRead);
 
-    const bookDelete = document.createElement('td');
+    const bookDelete = document.createElement('th');
     const deleteSymbol = document.createElement('i');
+    deleteSymbol.innerHTML = "Remove";
+
     deleteSymbol.classList.add('delete_icon');
     bookDelete.appendChild(deleteSymbol);
     bookRow.appendChild(bookDelete);
@@ -92,11 +94,11 @@ function listenClicks() {
       } else if (target.classList.contains('checkmark_true')) {
         target.classList.remove('checkmark_true');
         target.classList.add('checkmark_false');
-        myLibrary[th].status = false;
+        myLibrary[tr].read = false;
       } else if (target.classList.contains('checkmark_false')) {
         target.classList.remove('checkmark_false');
         target.classList.add('checkmark_true');
-        myLibrary[th].status = true;
+        myLibrary[tr].read = true;
       }
       displayBooks();
     });

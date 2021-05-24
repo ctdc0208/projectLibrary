@@ -242,17 +242,27 @@ img {
       border-bottom: 7px solid;
       border-right: 7px solid;
 }
+
 .delete_icon {
-  display: inline-block;
-      background: url(https://www.kindpng.com/picc/m/220-2200770_font-trash-fa-trash-icon-png-transparent-png.png);
-      color: black;
-      height: 50px;
-      width: 50px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 30px;
+    font-size: 18px;
+    font-weight: 300;
+    border-radius: 10px;
+    border: solid 2px black;
+    background-color: #ff7f79;
 }
+.delete_icon:hover {
+  background-color: gray;
+}
+
 
 .checkmark_true:hover,
 .checkmark_false:hover,
 .delete_icon:hover {
-  color: gray;
+  color: black;
   cursor: pointer;
 }
