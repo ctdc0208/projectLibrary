@@ -204,18 +204,16 @@ img {
   display: flex;
   align-content: center;
   flex-direction: column;
-  padding: 25px;
-    padding-top: 25px;
-    padding-right: 25px;
-    padding-bottom: 25px;
-    padding-left: 25px;
+  padding: 30px;
 }
 
 .bookList {
+  justify-content: space-around;
   border-collapse: collapse;
 }
 .bookList th{
-  padding: 25px;
+  padding: 30px;
+  width: 105.817px;
 }
 .book-values {
   background-color: #DCBE87;
