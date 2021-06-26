@@ -9,17 +9,19 @@ closePopUp.addEventListener('click', () => popUpForm.style.display = 'none');
 
 let myLibrary = [];
 
-function Book(title, author, pages, read) {
-  this.title = title
-  this.author = author
-  this.pages = pages
-  this.read = read
+class books {
+    constructor (title, author, pages, read) {
+      this.title = title
+      this.author = author
+      this.pages = pages
+      this.read = read
+    }
 }
 
 function addBookToLibrary(title, author, pages, read){
   popUpForm.style.display = 'none';
 
-  const book = new Book(title, author, pages, read);
+  book = new books(title, author, pages, read);
   myLibrary.push(book);
   displayBooks();
 }
